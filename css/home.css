@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+#recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    padding: 20px;
+    margin-left: 11%;
+}
+
+.recipe-box {
+    width: calc(20% - 50px);
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.recipe-box h3 {
+    margin: 0;
+    font-size: 1.2em;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
