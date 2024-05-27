@@ -23,11 +23,11 @@
 <body>
     <div id="recipe-container">
         <?php
-        $csvFile = 'db/resep.csv';
+        $filename = 'db/resep.csv';
 
-        if (($handle = fopen($csvFile, 'r')) !== FALSE) {
+        if (($file = fopen($filename, 'r')) !== FALSE) {
             $resep = [];
-            while (($data = fgetcsv($handle, 1000, ',')) !== FALSE) {
+            while (($data = fgetcsv($file, 1000, ',')) !== FALSE) {
                 if ($data[0] == 'id') continue;
 
                 $resep[] = [
@@ -35,7 +35,7 @@
                     'judul' => $data[1],
                 ];
             }
-            fclose($handle);
+            fclose($file);
 
             usort($resep, function($a, $b) {
                 return $b['id'] - $a['id'];

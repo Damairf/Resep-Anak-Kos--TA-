@@ -57,12 +57,14 @@ if (isset($_GET['id'])) {
 </head>
 <body>
     <div class="content">
-        <?php if ($recipeFound): ?>
-            <h2><?php echo $judulResep; ?></h2>
-            <p><?php echo $kontenResep; ?></p>
-        <?php else: ?>
-            <p>Halaman error</p>
-        <?php endif; ?>
+        <?php
+        if ($recipeFound) {
+            echo'<h2>' . $judulResep . '</h2>';
+            echo'<p>' . $kontenResep . '</p>';
+        } else {
+            echo'<p>Halaman error</p>';
+        }
+        ?>
     </div>
 </body>
 </html>

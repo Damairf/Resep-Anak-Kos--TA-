@@ -84,6 +84,7 @@
 </html>
 
 <?php
+
 $filename = 'db/data.csv';
 $file = fopen($filename, 'r');
 $header = fgetcsv($file);
